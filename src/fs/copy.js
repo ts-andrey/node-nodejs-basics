@@ -19,7 +19,7 @@ export const copy = async (pathFolder = workPath, copyPathFolder = copyPath) => 
     for (const file of files) {
       const stats = await stat(path.join(pathFolder, file));
       if (stats.isDirectory()) {
-        copy(path.join(pathFolder, file), path.join(copyPathFolder, file));
+        await copy(path.join(pathFolder, file), path.join(copyPathFolder, file));
       } else {
         await copyFile(path.join(pathFolder, file), path.join(copyPathFolder, file));
       }
