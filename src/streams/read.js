@@ -1,5 +1,5 @@
-import path from 'path';
 import { createReadStream } from 'fs';
+import path from 'path';
 
 const WORK_PATH = path.join(process.cwd(), './src/streams/');
 const FILE_PATH = './files/fileToRead.txt';
