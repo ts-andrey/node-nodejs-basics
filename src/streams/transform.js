@@ -1,3 +1,7 @@
 export const transform = async () => {
-    // Write your code here 
+  process.stdin.on('data', data => {
+    process.stdout.write(`${data.reverse()}\n\n`, 'utf8');
+  });
 };
+
+transform();
